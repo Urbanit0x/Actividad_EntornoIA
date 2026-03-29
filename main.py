@@ -2,9 +2,11 @@ import os
 import pandas as pd
 import psycopg2
 from dotenv import load_dotenv
+from pathlib import Path
 
-# 1. Cargar configuración
-load_dotenv()
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
+
 db_url = os.getenv("DB_URL")
 
 def iniciar_app():
@@ -31,7 +33,7 @@ def iniciar_app():
                 cur.execute("INSERT INTO metricas_ia (metrica, valor) VALUES (%s, %s)", (row['metrica'], row['valor']))
             
             conn.commit()
-            print("✅ ¡Éxito! Los datos han sido persistidos en Supabase.")
+            print("¡Éxito! Los datos han sido persistidos en Supabase.")
             cur.close()
             conn.close()
         except Exception as e:
