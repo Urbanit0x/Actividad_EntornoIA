@@ -7,7 +7,7 @@ El objetivo principal es que los datos dejen de ser temporales y pasen a ser **p
 ---
 
 
-### 🛡️ Justificación Técnica de la Selección
+### Justificación Técnica de la Selección
 
 Para cumplir con los estándares de un entorno de IA en la nube, se seleccionaron estas herramientas bajo los siguientes criterios técnicos:
 
